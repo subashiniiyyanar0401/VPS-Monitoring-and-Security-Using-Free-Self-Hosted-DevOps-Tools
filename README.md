@@ -1,14 +1,20 @@
-# VPS Monitoring and Security: Research and Test Implementation
+# VPS Monitoring and Security | DevOps Internship Project
 
-A research report and small-scale test of a free, self-hosted stack for detecting server problems before users do, recovering automatically where it is safe, and alerting the team.
+During my DevOps internship at **Uyar Technologies**, I worked on a hands-on monitoring and security implementation to understand how a small cloud server can be monitored, how application downtime can be detected, and how selected failures and security events can be handled.
 
-## Objective
+This repository documents the setup, test results, screenshots, troubleshooting, and lessons learned. The implementation was tested on a small cloud VM with a sample website and containers. It is a **small-scale test environment, not a production deployment or production-capacity benchmark**.
 
-Detect server issues, application crashes, traffic spikes and security threats first, recover automatically where safe, and alert the DevOps team, instead of learning about problems from client reports.
+## Project Objectives
 
-## Recommendation
+- Detect website and service downtime using uptime monitoring.
+- Observe server resource usage and container health.
+- Test Docker restart behavior and understand the limits of health checks.
+- Configure and verify brute-force protection.
+- Send actionable notifications and document gaps discovered during testing.
 
-Start with a free, self-hosted stack that is small enough for a team to maintain:
+## Tools and Technologies
+
+The following free or self-hosted tools were selected for the implementation:
 
 | Need | Tool | Cost |
 |---|---|---|
@@ -21,7 +27,7 @@ Start with a free, self-hosted stack that is small enough for a team to maintain
 
 Consider paid platforms only when server count or maintenance effort grows.
 
-## Research Findings
+## Implementation Findings
 
 ### Crash detection and recovery
 - A Docker `unless-stopped` restart policy restarts a container that **exits**. It does not restart one that is **hung but still running**.
@@ -80,7 +86,7 @@ Starting thresholds (tune on real traffic):
 | Small VPS memory | Measure first; keep heavier monitoring components on a separate server |
 | Alert fatigue, no escalation | Warning/critical levels, repeat alerts, paging if after-hours support is promised |
 
-## Test Implementation (Summary)
+## Test Environment and Results
 
 **Environment:** a small cloud VM (under 1 GB RAM plus swap), Docker, and a sample three-container website (frontend, backend, database).
 
@@ -166,9 +172,11 @@ Memory footprint on the small VM: Uptime Kuma about 135 MiB, Netdata about 190 M
 - Alert delay was not measured separately.
 - Thresholds are starting values.
 
-## Conclusion
+## Conclusion and Next Steps
 
-A free, self-hosted stack detects downtime, recovers crashed processes, flags hung containers, gives live server visibility and blocks repeated brute-force attempts. The mistakes were as useful as the successes: verify protections at the firewall level, never rely on one alert, and measure a small server before adding tools. Next steps: an external uptime check, confirmed Netdata-to-Telegram alerts, and moving monitoring to a separate server.
+This internship project provided hands-on practice with uptime monitoring, server metrics, Docker recovery behavior, alerting, and Linux security checks. The tests showed that monitoring and security controls must be verified in practice: Docker health checks do not restart unhealthy containers by themselves, firewall bans must be confirmed at the firewall level, and a single alert can be missed.
+
+Next steps are to add an external uptime check, verify Netdata-to-Telegram delivery end to end, and move monitoring to a separate server so a full server outage does not disable its own monitoring. These improvements have not yet been demonstrated in this test environment.
 
 ## References
 
