@@ -2,7 +2,7 @@
 
 During my DevOps internship at **Uyar Technologies**, I worked on a hands-on monitoring and security implementation to understand how a small cloud server can be monitored, how application downtime can be detected, and how selected failures and security events can be handled.
 
-This repository documents the setup, test results, screenshots, troubleshooting, and lessons learned. The implementation was tested on a small cloud VM with a sample website and containers. It is a **small-scale test environment, not a production deployment or production-capacity benchmark**.
+This repository documents the setup, test results, screenshots, troubleshooting, and lessons learned. The implementation was tested on a cloud VM with a small website and containers. 
 
 ## Project Objectives
 
