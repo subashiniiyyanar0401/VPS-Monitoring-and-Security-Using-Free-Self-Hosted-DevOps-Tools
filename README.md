@@ -1,8 +1,8 @@
 # VPS Monitoring and Security | DevOps Internship Project
 
-During my DevOps internship at **Uyar Technologies**, I worked on a hands-on monitoring and security implementation to understand how a small cloud server can be monitored, how application downtime can be detected, and how selected failures and security events can be handled.
+During my DevOps internship at **Uyar Technologies**, I worked on a hands-on monitoring and security implementation to understand how a cloud server can be monitored, how application downtime can be detected, and how selected failures and security events can be handled.
 
-This repository documents the setup, test results, screenshots, troubleshooting, and lessons learned. The implementation was tested on a small cloud VM with a website and containers. 
+This repository documents the setup, test results, screenshots, troubleshooting, and lessons learned. The implementation was tested on website and containers. 
 
 ## Project Objectives
 
