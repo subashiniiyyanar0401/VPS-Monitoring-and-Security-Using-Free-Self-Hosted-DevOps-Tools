@@ -171,12 +171,11 @@ Memory footprint on the small VM: Uptime Kuma about 135 MiB, Netdata about 190 M
 - Netdata-to-Telegram delivery was configured but not demonstrated.
 - Alert delay was not measured separately.
 - Thresholds are starting values.
-
+- 
+Confidentiality: Client-identifying information, credentials, sensitive configuration details, and private application source code have been excluded from the repository.
 ## Conclusion and Next Steps
 
-This internship project provided hands-on practice with uptime monitoring, server metrics, Docker recovery behavior, alerting, and Linux security checks. The tests showed that monitoring and security controls must be verified in practice: Docker health checks do not restart unhealthy containers by themselves, firewall bans must be confirmed at the firewall level, and a single alert can be missed.
-
-Next steps are to add an external uptime check, verify Netdata-to-Telegram delivery end to end, and move monitoring to a separate server so a full server outage does not disable its own monitoring. These improvements have not yet been demonstrated in this test environment.
+This internship project provided hands-on practice with uptime monitoring, server metrics, Docker recovery behavior, alerting, and Linux security checks. The tests showed that monitoring and security controls must be verified in practice.
 
 ## References
 
