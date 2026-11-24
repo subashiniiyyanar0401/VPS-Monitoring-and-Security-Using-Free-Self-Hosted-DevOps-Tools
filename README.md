@@ -2,7 +2,7 @@
 
 During my DevOps internship at **Uyar Technologies**, I worked on a hands-on monitoring and security implementation to understand how a small cloud server can be monitored, how application downtime can be detected, and how selected failures and security events can be handled.
 
-This repository documents the setup, test results, screenshots, troubleshooting, and lessons learned. The implementation was tested on a cloud VM with a small website and containers. 
+This repository documents the setup, test results, screenshots, troubleshooting, and lessons learned. The implementation was tested on a small cloud VM with a website and containers. 
 
 ## Project Objectives
 
@@ -109,47 +109,47 @@ Memory footprint on the small VM: Uptime Kuma about 135 MiB, Netdata about 190 M
 
 **Downtime detection and alerts**
 
-![Uptime Kuma backend monitor showing Up](images/03-kuma-backend-monitor-up.png)
+![Uptime Kuma backend monitor showing Up](03-kuma-backend-monitor-up.png)
 
-![Uptime Kuma frontend monitor showing Down](images/04-kuma-frontend-monitor-down.png)
+![Uptime Kuma frontend monitor showing Down](04-kuma-frontend-monitor-down.png)
 
-![Telegram DOWN and UP alert messages](images/05-telegram-down-up-alerts.png)
+![Telegram DOWN and UP alert messages](05-telegram-down-up-alerts.png)
 
-![Uptime Kuma monitor interval and retry settings](images/17-kuma-monitor-settings.png)
+![Uptime Kuma monitor interval and retry settings](17-kuma-monitor-settings.png)
 
 **Crash recovery and hung containers**
 
-![docker ps showing a stopped container](images/06-docker-ps-stopped-container.png)
+![docker ps showing a stopped container](06-docker-ps-stopped-container.png)
 
-![Container restarted automatically after its process was killed](images/07-crash-recovery-auto-restart.png)
+![Container restarted automatically after its process was killed](07-crash-recovery-auto-restart.png)
 
-![Unhealthy container with zero restarts](images/08-hung-container-unhealthy-no-restart.png)
+![Unhealthy container with zero restarts](08-hung-container-unhealthy-no-restart.png)
 
 **Server health with Netdata**
 
-![Netdata overview dashboard](images/09-netdata-dashboard-overview.png)
+![Netdata overview dashboard](09-netdata-dashboard-overview.png)
 
-![Netdata CPU utilization during a stress test](images/11-netdata-cpu-stress-chart.png)
+![Netdata CPU utilization during a stress test](11-netdata-cpu-stress-chart.png)
 
-![Netdata memory footprint](images/10-netdata-memory-footprint.png)
+![Netdata memory footprint](10-netdata-memory-footprint.png)
 
-![Netdata test alert email](images/12-netdata-test-alert-email.png)
+![Netdata test alert email](12-netdata-test-alert-email.png)
 
 **Brute-force protection with Fail2ban**
 
-![Fail2ban service status](images/13-fail2ban-service-status.png)
+![Fail2ban service status](13-fail2ban-service-status.png)
 
-![Fail2ban ban and firewall block](images/14-fail2ban-ban-and-firewall-block.png)
+![Fail2ban ban and firewall block](14-fail2ban-ban-and-firewall-block.png)
 
-![Fail2ban error log when the ban action pointed at a stopped firewall service](images/16-fail2ban-firewalld-error-log.png)
+![Fail2ban error log when the ban action pointed at a stopped firewall service](16-fail2ban-firewalld-error-log.png)
 
 **Resources and load test**
 
-![Memory, disk and container resource usage](images/01-server-resources-and-container-stats.png)
+![Memory, disk and container resource usage](01-server-resources-and-container-stats.png)
 
-![Uptime Kuma memory use after install](images/02-uptime-kuma-install-and-memory.png)
+![Uptime Kuma memory use after install](02-uptime-kuma-install-and-memory.png)
 
-![Apache Bench load test results](images/15-apache-bench-load-test.png)
+![Apache Bench load test results](15-apache-bench-load-test.png)
 
 
 ## Mistakes and Lessons
